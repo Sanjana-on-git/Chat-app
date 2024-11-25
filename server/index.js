@@ -1,5 +1,5 @@
 import express from 'express';
-import { createServer } from 'http';
+import { createServer } from 'https';
 import { Server } from 'socket.io';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -11,7 +11,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "sanjanachats.netlify.app",
+    origin: "https://sanjanachats.netlify.app",
     methods: ["GET", "POST"]
   }
 });
